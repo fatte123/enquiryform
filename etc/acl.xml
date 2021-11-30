@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Digital_Adminhtml::admin">
+                <resource id="Digital_Requestinfo::requestinfo" title="Requestinfo" sortOrder="40">
+                    <resource id="Digital_Requestinfo::manage" title="Requestinfo Module" sortOrder="10">
+						<resource id="Digital_Requestinfo::save" title="Save Requestinfo" sortOrder="10" />
+                        <resource id="Digital_Requestinfo::news_delete" title="Delete Requestinfo" sortOrder="20" />
+					</resource>
+                </resource>
+                <resource id="Digital_Adminhtml::stores">
+                    <resource id="Digital_Adminhtml::stores_settings">
+                        <resource id="Digital_Adminhtml::config">
+                            <resource id="Digital_Requestinfo::config_requestinfo" title="Requestinfo Section" sortOrder="50" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

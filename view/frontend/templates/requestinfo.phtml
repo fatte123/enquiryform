@@ -1,0 +1,46 @@
+<?php   $customerId = $this->getCustomerId();?>
+  <div class="requestinfo commentform">
+    <form name="addData" enctype="multipart/form-data" method="post" id="enquiry_form" class="form"
+    action="<?php echo $block->getBaseUrl().'requestinfo/index/post' ?>"
+    data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+    data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+      <fieldset class="fieldset row">
+
+          <input type="hidden" name="sapcustomerid" value="<?php echo $customerId; ?>">
+        <div class="field name required">
+        <label class="label" for="name"><span><?= $block->escapeHtmlAttr(__('Name')) ?></span></label>
+        <div class="control">
+         <input name="name" id="name" title="name" value="<?= $block->escapeHtmlAttr($this->helper(\Digital\Requestinfo\Helper\Data::class)->getPostValue('name')) ?>" class="input-text"type="text" data-validate="{required:true}">
+       </div>
+     </div>
+     <div class="field Phone required">
+        <label class="label" for="phone"><span><?= $block->escapeHtmlAttr(__('Phone')) ?></span></label>
+        <div class="control">
+         <input name="phone" id="phone" title="phone" value="<?= $block->escapeHtmlAttr($this->helper(\Digital\Requestinfo\Helper\Data::class)->getPostValue('phone')) ?>" class="input-text"type="text" data-validate="{required:true}">
+       </div>
+     </div>
+     <div class="field email required">
+        <label class="label" for="email"><span><?= $block->escapeHtmlAttr(__('Email')) ?></span></label>
+        <div class="control">
+         <input name="email" id="email" title="email" value="<?= $block->escapeHtmlAttr($this->helper(\Digital\Requestinfo\Helper\Data::class)->getPostValue('email')) ?>" class="input-text" type="text" data-validate="{required:true,'validate-email':true}">
+       </div>
+     </div>
+     <div class="field name comments required">
+  <label class="label" for="detailsofchangesrequired"><span><?= $block->escapeHtmlAttr(__('Details of Changes Required')) ?></span></label>
+  <div class="control">
+    <textarea name="detailsofchangesrequired" rows="4" cols="7" data-validate="{required:true}"><?= $block->escapeHtmlAttr($this->helper(\Digital\Requestinfo\Helper\Data::class)->getPostValue('detailsofchangesrequired')) ?></textarea>
+  </div>
+</div>
+    <?php echo $block->getChildHtml('form.additional.info'); ?>
+<div class="actions-toolbar">
+  <div class="primary">
+    <button type="submit" class="action submit primary" title="Save" id="request_submit"><span><?= $block->
+    escapeHtmlAttr(__('Submit')) ?></span></button>
+  </div>
+</div>
+</fieldset>
+</fieldset>
+</form>
+</div>
+</div>

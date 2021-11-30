@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="jquery/fileUploader/css/jquery.fileupload-ui.css"/>
+        <link src="jquery/fileUploader/bootstrap.js"/>
+    </head>
+    <update handle="editor"/>
+    <body>
+        <referenceBlock name="page.title">
+            <action method="setPageTitle">
+                <argument name="pageTitle" xsi:type="string">View Request Info Enquiry</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Digital\Requestinfo\Block\Adminhtml\Requestinfo\Edit" name="requestinfo_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Digital\Requestinfo\Block\Adminhtml\Requestinfo\Edit\Tabs" name="requestinfo_edit_tabs">
+                <block class="Digital\Requestinfo\Block\Adminhtml\Requestinfo\Edit\Tab\Main" name="requestinfo_edit_tab_main"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">requestinfo_edit_tab_main</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
