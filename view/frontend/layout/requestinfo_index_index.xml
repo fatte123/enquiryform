@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+      <referenceBlock name="breadcrumbs">
+      <action method="addCrumb">
+      <argument name="crumbName" xsi:type="string">Home</argument>
+      <argument name="crumbInfo" xsi:type="array">
+      <item name="title" xsi:type="string">Home</item>
+      <item name="label" xsi:type="string">Home</item>
+      <item name="link" xsi:type="string">{{baseUrl}}</item>
+      </argument>
+      </action>
+      <action method="addCrumb">
+      <argument name="crumbName" xsi:type="string">requestinfo</argument>
+      <argument name="crumbInfo" xsi:type="array">
+      <item name="title" xsi:type="string">Request To Update Info</item>
+      <item name="label" xsi:type="string">Request To Update Info</item>      
+      </argument>
+      </action>
+    </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Digital\Requestinfo\Block\Requestinfo" name="requestinfo.list" template="requestinfo.phtml">
+            <container name="form.additional.info" label="Form Additional Info">
+                    <block class="Magento\Captcha\Block\Captcha" name="captcha" after="-" cacheable="false">
+                        <action method="setFormId">
+                            <argument name="formId" xsi:type="string">requestinfo_captcha</argument>
+                        </action>
+                        <action method="setImgWidth">
+                            <argument name="width" xsi:type="string">230</argument>
+                        </action>
+                        <action method="setImgHeight">
+                            <argument name="width" xsi:type="string">50</argument>
+                        </action>
+                    </block>
+                </container>
+            </block>
+        </referenceContainer>
+		<referenceContainer name="page.top">			
+			<container name="cms-page-banner-view" htmlTag="div" htmlClass="cms-banner-view" after="navigation.sections">
+					<container name="cms-page-banner" htmlTag="div" htmlClass="cms-banner">	
+						<block class="Magento\Theme\Block\Html\Header" name="cms-banner-view-custom" template="Digital_Requestinfo::banner.phtml"/>						
+					</container>
+			</container>						
+        </referenceContainer>
+    </body>
+</page>

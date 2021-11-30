@@ -1,0 +1,21 @@
+{
+  "name": "digital-module/requestinfo",
+  "description": "Magento 2 SEO extension",
+  "type": "magento2-module",
+  "authors": [
+    {
+      "name": "Digital",
+      "email": "mominfatte@gmail.com",
+      "homepage": "",
+      "role": "Leader"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Digital\\Requestinfo\\": ""
+    }
+  }
+}

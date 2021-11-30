@@ -1,0 +1,8 @@
+<?php 
+$zdigital=$this->helper("Zdigital\Digital\Helper\Data");
+$banner=$zdigital->getRequestInfo();	
+if($banner){ 
+$image_url=$block->getViewFileUrl('images/loader-1.gif');
+?>
+<img src="<?php echo $banner?>" alt="warrantyclaim" title="warrantyclaim" class="image-banner img lazyload">
+<?php } ?>

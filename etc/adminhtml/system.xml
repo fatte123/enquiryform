@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="digital" translate="label" sortOrder="10" class="digital-tab">
+        <label>23 Digital Settings</label>
+    </tab> 
+    <section id="requestinfo" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Requestinfo</label>
+            <tab>digital</tab>
+            <resource>Digital_Requestinfo::config_requestinfo</resource>
+             <group id="requestinfo_general"  showInDefault="1">  
+              <label>Requestinfo Banner</label>              
+             <field id="requestinfobanner" translate="label" type="image" sortOrder="2116" showInDefault="1" showInWebsite="1" >
+                <label>Requestinfo Form Page Banner</label>
+           <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+           <upload_dir config="system/filesystem/media" scope_info="1">requestinfo</upload_dir>
+                    <base_url type="media" scope_info="1">requestinfo</base_url>
+            </field>
+      </group>
+        </section>
+        <section id="recaptcha_frontend">
+            <group id="type_for">
+                <field id="requestinfoinquiry" translate="label" type="select" sortOrder="140" showInDefault="1"
+                       showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enable for Request Info</label>
+                    <source_model>Magento\ReCaptchaAdminUi\Model\OptionSource\Type</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

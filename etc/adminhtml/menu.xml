@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<!-- <add id="Digital_Requestinfo::view" title="Request Info" module="Digital_Requestinfo" sortOrder="10" resource="Digital_Requestinfo::view" parent="Zdigital_Digital::23Digital"/> -->
+    	
+        <add id="Digital_Requestinfo::requestinfo_manage" title="Manage Request To Update Info Enquiry" module="Digital_Requestinfo" sortOrder="10" parent="Digital_Loantools::view" action="requestinfo/index/" resource="Digital_Requestinfo::manage"/>
+         <!-- <add id="Digital_Requestinfo::configuration" title="Configuration" module="Digital_Requestinfo" sortOrder="10" parent="Digital_Requestinfo::view" action="adminhtml/system_config/edit/section/requestinfo/" resource="Digital_Requestinfo::configuration" /> -->
+    </menu>
+</config>
