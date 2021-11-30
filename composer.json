@@ -1,28 +1,22 @@
 {
-    "name": "digital-module/requestinfo",
-    "description": "enquiry Form",
-    "type": "magento2-module",
-    "version": "0.1.0",
-    "minimum-stability": "dev",
-    "prefer-stable": "true",
-    "license": "OSL-3.0",  
-    "require": {
-        "php": ">=5.4.0",
-        "Digital/Requestinfo":"dev-master@dev"
-    },
-    "autoload": {
-      "files": 
-        [ 
-            "registration.php" 
-        ],
-      "psr-4": {
-            "Digital\\Requestinfo\\": ""
-        }
+  "name": "digital-module/requestinfo",
+  "description": "Magento 2 enquiry",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "Open Source License",
+  "authors": [
+    {
+      "name": "23digital",
+      "email": "test.23digital@gmail.com",
+      "role": "Developer"
     }
-    "repositories": [
-     {
-        "type": "git",
-        "url": "https://github.com/fatte123/enquiryform/edit/fatte123-patch-1"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Digital\\Requestinfo\\": ""
     }
-],
   }
+}
