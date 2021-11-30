@@ -1,21 +1,22 @@
 {
-  "name": "digital-module/requestinfo",
-  "description": "Magento 2 SEO extension",
-  "type": "magento2-module",
-  "authors": [
-    {
-      "name": "Digital",
-      "email": "mominfatte@gmail.com",
-      "homepage": "",
-      "role": "Leader"
-    }
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
-    ],
-    "psr-4": {
-      "Digital\\Requestinfo\\": ""
+    "name": "digital-module/requestinfo",
+    "description": "enquiry Form",
+    "type": "magento2-module",
+    "version": "0.1.0",
+    "minimum-stability": "dev",
+    "prefer-stable": "true",
+    "license": "OSL-3.0",  
+    "require": {
+        "php": ">=5.4.0",
+        "Digital/Requestinfo":"dev-master@dev"
+    },
+    "autoload": {
+      "files": 
+        [ 
+            "registration.php" 
+        ],
+      "psr-4": {
+            "Digital\\Requestinfo\\": ""
+        }
     }
   }
-}
